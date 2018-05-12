@@ -1,0 +1,33 @@
+extends: react-app
+settings:
+  react:
+    version: 15.4.2
+plugins:
+    - prettier
+    - jsx-a11y
+    - react
+    - import
+rules:
+  curly: error
+  jsx-a11y/href-no-hash: off
+  jsx-a11y/anchor-is-valid:
+    - warn
+    - aspects:
+      - invalidHref
+  react/prop-types: error
+  no-var: error
+  no-unused-vars: error
+  no-duplicate-imports: error
+  no-redeclare: error
+  no-undefined: error
+  no-use-before-define:
+    - error
+    - functions: false
+  no-unused-expressions: error
+
+  # IMPORTANT: Keep prettier settings in sync with `package.json` scripts
+  prettier/prettier:
+    - error
+    - printWidth: 120
+      singleQuote: true
+      tabWidth: 4
