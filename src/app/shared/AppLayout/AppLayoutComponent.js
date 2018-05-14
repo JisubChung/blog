@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 
-import Header from 'Components/Layouts/shared/Header';
+import Header from 'app/shared/Header/index';
+import Footer from 'app/shared/Footer/index';
 
 const styles = {
     App: {
@@ -14,7 +15,7 @@ const styles = {
 };
 
 @injectSheet(styles)
-export default class BlogComponent extends Component {
+export default class AppLayoutComponent extends Component {
     static propTypes = {
         children: PropTypes.any,
         classes: PropTypes.object
@@ -25,7 +26,8 @@ export default class BlogComponent extends Component {
         return (
             <div className={classes.App}>
                 <Header />
-                <p className={classes.Intro}>{children}</p>
+                {children}
+                <Footer />
             </div>
         );
     }
