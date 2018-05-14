@@ -25,9 +25,9 @@ export default class AppLayoutLiteComponent extends Component {
         const { classes, children } = this.props;
         return (
             <div className={classes.App}>
-                <Header />
+                <Header lite />
                 {children}
-                <Footer />
+                <Footer lite />
             </div>
         );
     }

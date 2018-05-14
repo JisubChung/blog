@@ -4,16 +4,14 @@ import injectSheet from 'react-jss';
 
 const styles = {
     App: {
-        backgroundColor: 'purple'
-    },
-    h1: {
-        color: 'red'
+        backgroundColor: 'green'
     }
 };
 
 @injectSheet(styles)
-export default class GalleryComponent extends Component {
+export default class NotFoundComponent extends Component {
     static propTypes = {
+        children: PropTypes.any,
         classes: PropTypes.object
     };
 
@@ -21,7 +19,7 @@ export default class GalleryComponent extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.App}>
-                <h1 className={classes.h1}>This is a gallery</h1>
+                <h1>Page Not Found</h1>
             </div>
         );
     }

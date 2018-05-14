@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { routePaths } from 'router/routePaths';
 
@@ -40,15 +40,14 @@ export default class HeaderComponent extends React.Component {
         return (
             <React.Fragment>
                 {lite ? (
-                    <div>lite header</div>
+                    <header className={classes.Header}>lite header</header>
                 ) : (
                     <header className={classes.Header}>
                         <h1 className={classes.Title}>Header Title</h1>
                         <div className={classes.parent}>
-                            <NavLink to={routePaths.home}>Home</NavLink>
+                            <Link to={routePaths.home}>Home</Link>
                             <Link to={routePaths.blog}>Blog</Link>
                             <Link to={routePaths.gallery}>Gallery</Link>
-                            <div className={classes.child}>child</div>
                         </div>
                     </header>
                 )}
