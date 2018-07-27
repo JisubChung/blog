@@ -45,9 +45,13 @@ export default class HeaderComponent extends React.Component {
                     <header className={classes.Header}>
                         <h1 className={classes.Title}>Header Title</h1>
                         <div className={classes.parent}>
-                            <Link to={routePaths.home}>Home</Link>
-                            <Link to={routePaths.blog}>Blog</Link>
-                            <Link to={routePaths.gallery}>Gallery</Link>
+                            {routePaths.map(route => {
+                                return (
+                                    <Link to={route.path} key={route.name}>
+                                        {route.name}
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </header>
                 )}

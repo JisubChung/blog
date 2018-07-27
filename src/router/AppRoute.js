@@ -8,7 +8,7 @@ import { pick, omit } from 'lodash';
 const switchProps = ['path', 'exact', 'strict', 'sensitive', 'computedMatch', 'location'];
 
 @withRouter
-export class AppRoute extends Component {
+export default class AppRoute extends Component {
     static propTypes = {
         component: PropTypes.func,
         lite: PropTypes.bool

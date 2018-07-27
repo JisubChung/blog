@@ -7,10 +7,15 @@ import Footer from 'app/shared/Footer/index';
 
 const styles = {
     App: {
-        textAlign: 'center'
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column'
     },
     Intro: {
         fontSize: 'large'
+    },
+    Header: {
+        flexGrow: 5
     }
 };
 
@@ -25,9 +30,9 @@ export default class AppLayoutComponent extends Component {
         const { classes, children } = this.props;
         return (
             <div className={classes.App}>
-                <Header />
+                <Header className={classes.Header} />
                 {children}
-                <Footer />
+                <Footer className={classes.Footer} />
             </div>
         );
     }
